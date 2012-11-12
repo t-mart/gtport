@@ -38,30 +38,42 @@
       <!-- Main hero unit for a primary marketing message or call to action -->
       <div class="hero-unit">
         <h1>GT Port.</h1>
-        <?php echo '<p>If you can see this, PHP is working.</p>'; ?>
-        <p>By Chip Cely, Tim Martin, and Philip Smith</p>
-        <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+        <p>By Chip Cely, Tim Martin, and Phillip Smith</p>
       </div>
 
-      <!-- Example row of columns -->
       <div class="row">
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+        <div class="span8">
+          <h2>Login</h2>
+          <form class="form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputEmail">Email</label>
+              <div class="controls">
+                <input type="text" id="inputEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputPassword">Password</label>
+              <div class="controls">
+                <input type="password" id="inputPassword" placeholder="Password">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+                  <input type="checkbox"> Remember me
+                </label>
+                <button type="submit" class="btn">Sign in</button>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
-       </div>
-        <div class="span4">
-          <h2>Heading</h2>
-          <p>Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-          <p><a class="btn" href="#">View details &raquo;</a></p>
+          <br>
+          <br>
+          <h2>Or create an account</h2>
+          <h2><a href="create_account.php">Click Here</a></h2>
         </div>
       </div>
-
       <hr>
 
       <footer>
@@ -71,7 +83,7 @@
 
     </div> <!-- /container -->
 
-    <!-- Le javascript
+    <!-- Le javascript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
 
   </body>
