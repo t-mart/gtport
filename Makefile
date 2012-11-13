@@ -17,3 +17,9 @@ link-site:
 	sudo rm -rf /var/www
 	sudo ln -sf -T $(PWD) /var/www
 	sudo service apache2 reload
+
+tunnel-tmartin:
+	ssh -L 3306:127.0.0.1:3306 tmartin@web348.webfaction.com
+
+tunnel-psmith44:
+	ssh -L 3306:127.0.0.1:3306 psmith44@web348.webfaction.com
