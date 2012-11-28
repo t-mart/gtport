@@ -154,7 +154,16 @@
 		</form>
 	<script>
 		$(document).ready(function() {
-			 //$("#faculty_options").hide();
+			$("#faculty_options").hide();
+		});
+		$("#user_type").change(function(){
+			if($("#user_type option:selected").text() == "Student"){
+				$("#faculty_options").hide();
+				$("#student_options").show();
+			}else if($("#user_type option:selected").text() == "Faculty"){
+				$("#faculty_options").show();
+				$("#student_options").hide();
+			}
 		});
 	</script>
   </body>
