@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-	<?php include('bootstrap_head.html');
+	<?php include('bootstrap_head.html')?>
   </head>
 
   <body>
