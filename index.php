@@ -74,7 +74,7 @@
       <div class="hero-unit">
         <h1>GT Port.</h1>
         <?php echo '<p>If you can see this, PHP is working.</p>'; ?>
-        <p>By Chip Cely, Tim Martin, and Phillip Smith</p>
+        <p>By Chip Cely, Tim Martin, and Philip Smith</p>
         <p><a class="btn btn-primary btn-large">Learn more &raquo;</a></p>
       </div>
 
