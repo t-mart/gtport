@@ -10,7 +10,7 @@ switch ($method) {
 		include('create_account/create_account_form.php');
     break;
 }
-mysql_close($con);
+//mysql_close($con);
 
 
 function handleForm(){
@@ -19,7 +19,7 @@ function handleForm(){
 
 	$userType = strtolower($_POST['user_type']);
 
-	$users_query = "INSERT INTO users (username,password,type) VALUES ('".$_POST['username']."','".$_POST['password']."','".$userType."');";
+	$users_query = "INSERT INTO users (username,password,type) VALUES ('".$_POST['username']."','".$_POST['password']."','".$userType."s');";
 	echo "users_query: ".$users_query."\n";
 	if(!mysql_query($users_query))
 		die('Error: '.mysql_error());
@@ -41,10 +41,13 @@ function handleForm(){
 		$student_query = "INSERT INTO students (user_id,department_id,degree) VALUES (".$user_id.",".$_POST['student_degree'].",'".$_POST['student_degree_type']."');";
 
 		echo "student_query: ".$student_query."\n";
+		if(!mysql_query($student_query))
+			die('Error: '.mysql_error());
 
 		//school history
 		//tutoring
-	}else{
+
+	}else{ //FACULTY QUERY
 		$faculty_query = "INSERT INTO faculty (user_id,department_id,position) VALUES (".$user_id.",".$_POST['faculty_department'].",'".$_POST['faculty_position']."');";
 		echo "faculty_query: ".$faculty_query."\n";
 		if(!mysql_query($faculty_query))
