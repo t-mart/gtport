@@ -19,7 +19,7 @@ function handleForm(){
 
 	$userType = strtolower($_POST['user_type']);
 
-	$users_query = "INSERT INTO users (username,password,type) VALUES ('".$_POST['username']."','".$_POST['password']."','".$userType."s');";
+	$users_query = "INSERT INTO users (username,password,type) VALUES ('".$_POST['username']."','".$_POST['password']."','".$userType."');";
 	echo "users_query: ".$users_query."\n";
 	if(!mysql_query($users_query))
 		die('Error: '.mysql_error());
@@ -57,7 +57,20 @@ function handleForm(){
 		echo "faculty_sections_query: ".$faculty_query."\n";
 		if(!mysql_query($faculty_query))
 			die('Error: '.mysql_error());
+
 		//research interests
+		if($_POST['research_interests'] != ""){
+			$research_interests = explode(",",$_POST['research_interests']);
+			foreach($research_interests as $interest){
+				$interest = trim($interest);
+				$interest_query = "INSERT INTO research_interests (faculty_id,name) VALUES (".$user_id.",'".$interest."');";
+				echo "interest_query: ".$interest_query."\n";
+/*DB error, id not auto-incrementing
+				if(!mysql_query($interest_query))
+					die('Error: '.mysql_error());
+*/
+			}
+		}
 	}
 
 	echo '</pre>';

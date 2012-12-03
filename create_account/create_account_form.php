@@ -85,8 +85,8 @@
 				<label class="control-label" for="user_type">Type of User</label>
 				<div class="controls">
 					<select name="user_type" id="user_type">
-						<option>Student</option>
-						<option>Faculty</option>
+						<option value="students">Student</option>
+						<option value="faculty">Faculty</option>
 					</select>
 				</div>
 			</div>
@@ -171,7 +171,7 @@
 				</div>
 				<div class="form-options controls">
 					<button type="submit" class="btn btn-primary">Register</button>
-					<button type="button" class="btn">Cancel</button>
+					<a href="index.php"><button type="button" class="btn">Cancel</button></a>
 				</div>
 		</form>
 	<script>
