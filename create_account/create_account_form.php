@@ -11,7 +11,7 @@
 	</script>
   </head>
   <body>
-		<?php include('navbar.html')?>
+		<?php //include('navbar.html')?>
 		<form class="form-horizontal" action="create_account.php" method="post">
 			<div class="control-group">
 				<label class="control-label" for="username">Username</label>
@@ -162,12 +162,17 @@
 						</select>
 					</div>
 				</div>
-				<div>Research Interests</div>
-			</div>
-			<div class="form-options controls">
-				<button type="submit" class="btn btn-primary">Register</button>
-				<button type="button" class="btn">Cancel</button>
-			</div>
+				<div class="control-group">
+					<label class="control-label" for="research_interests">Research Interests</label>
+					<div class="controls">
+						<input type="text" name="research_interests" placeholder="Comma-Seperated Research Interests">
+					</div>
+				</div>
+				</div>
+				<div class="form-options controls">
+					<button type="submit" class="btn btn-primary">Register</button>
+					<button type="button" class="btn">Cancel</button>
+				</div>
 		</form>
 	<script>
 		$(document).ready(function() {
