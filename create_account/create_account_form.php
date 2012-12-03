@@ -11,7 +11,7 @@
 	</script>
   </head>
   <body>
-		<?php //include('navbar.html')?>
+		<?php include('navbar.html')?>
 		<form class="form-horizontal" action="create_account.php" method="post">
 			<div class="control-group">
 				<label class="control-label" for="username">Username</label>
@@ -97,7 +97,7 @@
 						<select name="student_degree">
 							<?php $result = mysql_query("SELECT * FROM departments");
 								while($row = mysql_fetch_array($result)){
-									echo "<option>".$row['name']."</option>";
+									echo "<option value=".$row['id'].">".$row['name']."</option>";
 								}
 							?>
 						</select>
@@ -123,7 +123,7 @@
 						<select name="faculty_department">
 							<?php $result = mysql_query("SELECT * FROM departments");
 								while($row = mysql_fetch_array($result)){
-									echo "<option>".$row['name']."</option>";
+									echo "<option value=".$row['id'].">".$row['name']."</option>";
 								}
 							?>
 						</select>
