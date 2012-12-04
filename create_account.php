@@ -37,7 +37,7 @@ function handleForm(){
 
 	$student_query = "";
 	$faculty_query = "";
-	if($userType == "student"){
+	if($userType == "students"){
 		$student_query = "INSERT INTO students (user_id,department_id,degree) VALUES (".$user_id.",".$_POST['student_degree'].",'".$_POST['student_degree_type']."');";
 
 		echo "student_query: ".$student_query."\n";
@@ -45,6 +45,15 @@ function handleForm(){
 			die('Error: '.mysql_error());
 
 		//school history
+		for($i=1;$i<4;$i++){
+			if(isset($_POST['previous_education'.$i.'_name'])){
+				$prefix = 'previous_education'.$i;
+				$history_query = "INSERT INTO school_histories (student_id,grad_year,name,gpa,major,degree) VALUES (".$user_id.",'".$_POST[$prefix.'_year']."','".$_POST[$prefix.'_name']."','".$_POST[$prefix.'_gpa']."','".$_POST[$prefix.'_major']."','".$_POST[$prefix.'_degree']."');";
+				echo "history_query: ".$history_query."\n";
+				if(!mysql_query($history_query))
+					die('Error: '.mysql_error());
+			}
+		}
 		//tutoring
 
 	}else{ //FACULTY QUERY
@@ -65,14 +74,13 @@ function handleForm(){
 				$interest = trim($interest);
 				$interest_query = "INSERT INTO research_interests (faculty_id,name) VALUES (".$user_id.",'".$interest."');";
 				echo "interest_query: ".$interest_query."\n";
-/*DB error, id not auto-incrementing
 				if(!mysql_query($interest_query))
 					die('Error: '.mysql_error());
-*/
 			}
 		}
 	}
 
 	echo '</pre>';
+	//GOTO index.php
 }
 ?>
