@@ -17,8 +17,9 @@
         <h1>GT Port.</h1>
         <p>By Chip Cely, Tim Martin, and Phillip Smith</p>
       </div>
-
       <div class="row">
+
+<?php if (!isset($_SESSION['user_id'])) : ?>
         <div class="span8">
           <h2>Login</h2>
           <?php include('login-form.php') ?>
@@ -29,6 +30,11 @@
           <h2>Or create an account</h2>
           <h2><a href="create_account.php">Click Here</a></h2>
         </div>
+<?php else : ?>
+        <div class="span6 offset3 well">
+        <p>Use the links in the navigation bar to use the system.</p>
+        </div>
+<?php endif; ?>
       </div>
       <hr>
 

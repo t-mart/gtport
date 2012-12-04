@@ -1,6 +1,6 @@
 <form class="form-horizontal" method="post" name="loginForm" action="login-exec.php">
   <div class="control-group">
-    <label class="control-label" for="username">Email</label>
+    <label class="control-label" for="username">Username</label>
     <div class="controls">
       <input type="text" name="username" id="username" placeholder="Username">
     </div>
