@@ -5,10 +5,11 @@
   session_start();
   
   //Include database connection details
-  include('database.php');
+  include_once('database.php');
   
-  //Array to store validation errors
+  //Array to alerts
   $errmsg_arr = array();
+  $successmsg_arr = array();
   
   //Validation error flag
   $errflag = false;
