@@ -9,10 +9,10 @@
 
 	<?php include('navbar.html') ?>
 
-	<?php include('alert.php') ?>
 
     <div class="container">
 
+	<?php include('alert.php') ?>
       <div class="hero-unit">
         <h1>GT Port.</h1>
         <p>By Chip Cely, Tim Martin, and Phillip Smith</p>
