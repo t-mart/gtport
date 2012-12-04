@@ -49,14 +49,17 @@ var_dump($_POST);
 
       $successmsg_arr[] = 'You have logged in succesfully';
       $_SESSION['success_alerts'] = $successmsg_arr;
+
       session_write_close();
 
+      //change this to location to redirect the user elsewhere on successful login
       header("location: index.php");
       exit();
     }else {
       //Login failed
       $errmsg_arr[] = 'Username or password is invalid';
       $_SESSION['error_alerts'] = $errmsg_arr;
+
       session_write_close();
 
       header("location: index.php");
