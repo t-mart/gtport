@@ -47,7 +47,7 @@ var_dump($_POST);
       $_SESSION['user_id'] = $user['id'];
       $_SESSION['user_type'] = $user['type'];
 
-      $successmsg_arr[] = 'Username or password is invalid';
+      $successmsg_arr[] = 'You have logged in succesfully';
       $_SESSION['success_alerts'] = $successmsg_arr;
       session_write_close();
 
@@ -55,7 +55,7 @@ var_dump($_POST);
       exit();
     }else {
       //Login failed
-      $errmsg_arr[] = 'You have logged in succesfully';
+      $errmsg_arr[] = 'Username or password is invalid';
       $_SESSION['error_alerts'] = $errmsg_arr;
       session_write_close();
 
