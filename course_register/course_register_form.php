@@ -31,12 +31,14 @@
 	<script>
 		$(document).ready(function() {
 			loadCoursesTable();
+			$("#registration").addClass("active");
 		});
 
 		$("#department").change(function(){
 			loadCoursesTable();
 		});
 	</script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 <?php mysql_close($con);?>

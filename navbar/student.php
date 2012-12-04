@@ -3,7 +3,7 @@
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration <b class="caret"></b></a>
   <ul class="dropdown-menu">
     <li><a href="course_register.php">Register for Courses</a></li>
-    <li><a href="#">View Enrolled Courses</a></li>
+    <li><a href="view_courses.php">View Enrolled Courses</a></li>
   </ul>
   </li>
   <li id="update_personal_information"><a href="#">Update Personal Information</a></li>
