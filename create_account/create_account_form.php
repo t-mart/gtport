@@ -33,12 +33,6 @@
 				</div>
 			</div>
 			<div class="control-group">
-				<label class="control-label" for="confirm_password">Confirm Password</label>
-				<div class="controls">
-					<input type="password" name="confirm_password" placeholder="Confirm Password">
-				</div>
-			</div>
-			<div class="control-group">
 				<label class="control-label" for="email">Email</label>
 				<div class="controls">
 					<input type="email" name="email" placeholder="user@host.com">
@@ -120,7 +114,6 @@
 						</select>
 					</div>
 				</div>
-				<div>Tutoring Options</div>
 				<div class="control-group">
 					<label class="control-label" for="previous_education"><b>Previous Education</b></label>
 				</div>

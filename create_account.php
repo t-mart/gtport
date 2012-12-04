@@ -54,8 +54,6 @@ function handleForm(){
 					die('Error: '.mysql_error());
 			}
 		}
-		//tutoring
-
 	}else{ //FACULTY QUERY
 		$faculty_query = "INSERT INTO faculty (user_id,department_id,position) VALUES (".$user_id.",".$_POST['faculty_department'].",'".$_POST['faculty_position']."');";
 		echo "faculty_query: ".$faculty_query."\n";
