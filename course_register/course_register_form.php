@@ -14,7 +14,6 @@
 		<?php include('navbar.html')?>
 		<form class="form-horizontal" action="course_register.php" method="post">
 			<select id="department">
-				<option value="-1">All Departments</option>
 				<?php
 					$result = mysql_query("SELECT * FROM departments");
 					while($row = mysql_fetch_array($result)){
