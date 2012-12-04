@@ -30,7 +30,7 @@ include_once('database.php');
       }
 
       //logout button for all user types
-      echo '<ul class="nav pull-right"><li><a href="logout.php">Logout</a></li></ul>';
+      echo '<ul class="nav pull-right"><li><a>Hello, '.$_SESSION['user_username'].'</a></li><li><button class="btn"><a href="logout.php">Logout</a></button></li></ul>';
     }
     ?>
     </div>
