@@ -14,5 +14,5 @@
 	if(mysql_num_rows($result)>0)
 		echo '    <li id="tutor_logbook"><a href="#contact">Tutor Logbook</a></li>';
   ?>
-  <li id="grade_report"><a href="#contact">View Grading Pattern</a></li>
+  <li id="grade_report"><a href="student_report.php">View Grading Pattern</a></li>
 </ul>
