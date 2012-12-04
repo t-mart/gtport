@@ -1,5 +1,5 @@
 <?php
-include('database.php');
+include('global.php');
 
 $debug = 0;
 
