@@ -2,7 +2,7 @@
   <li id="registration" class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Registration <b class="caret"></b></a>
   <ul class="dropdown-menu">
-    <li><a href="#">Register for Courses</a></li>
+    <li><a href="course_register.php">Register for Courses</a></li>
     <li><a href="#">View Enrolled Courses</a></li>
   </ul>
   </li>
