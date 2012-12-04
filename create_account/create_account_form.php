@@ -1,4 +1,4 @@
-<?php include('database.php');?>
+<?php include_once('database.php');?>
 <html>
   <head>
 		<?php include('bootstrap_head.html');?>

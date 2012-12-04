@@ -1,5 +1,6 @@
 <?php
-include('database.php');
+session_start();
+include_once('database.php');
 
 $debug = 0;
 
