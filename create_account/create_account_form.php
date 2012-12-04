@@ -3,11 +3,18 @@
   <head>
 		<?php include('bootstrap_head.html');?>
 	<script>
-	var loadSectionsDropdown = function(){
-				$.get('create_account/sections_dropdown.php',{course_id : $('select[name="faculty_course"] option:selected').val()}, function(data){
-					$('#faculty_course_section').html(data);
-				});
-			}
+		var loadSectionsDropdown = function(){
+			$.get('create_account/sections_dropdown.php',{course_id : $('select[name="faculty_course"] option:selected').val()}, function(data){
+				$('#faculty_course_section').html(data);
+			});
+		}
+		var addSchool = function(inNum){
+			$.get('create_account/previous_education_form.php',{index : inNum}, function(data){
+				$('#add_school_button').remove();
+				$('#previous_education').append(data);
+				$('#previous_education').append('<button type="button" class="btn" id="add_school_button" onclick="addSchool('+(inNum+1)+');">Add Another School</button>');
+			});
+		}
 	</script>
   </head>
   <body>
@@ -114,7 +121,11 @@
 					</div>
 				</div>
 				<div>Tutoring Options</div>
-				<div>Previous Education</div>
+				<div class="control-group">
+					<label class="control-label" for="previous_education"><b>Previous Education</b></label>
+				</div>
+				<div id="previous_education">
+				</div>
 			</div>
 			<div id="faculty_options">
 				<div class="control-group">
@@ -178,6 +189,7 @@
 		$(document).ready(function() {
 			$("#faculty_options").hide();
 			loadSectionsDropdown();
+			addSchool(1);
 		});
 
 		$("#user_type").change(function(){
@@ -191,6 +203,7 @@
 		});
 
 		$("#faculty_course").change(function(){loadSectionsDropdown();});
+		
 	</script>
   </body>
 </html>
