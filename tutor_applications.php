@@ -70,5 +70,10 @@
 
     <!-- Le javascript -->
     <script src="bootstrap/js/bootstrap.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$("#tutoring").addClass("active");
+			});
+		</script>
   </body>
 </html>
