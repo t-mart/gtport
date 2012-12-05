@@ -89,7 +89,12 @@
 						<select name="student_degree">
 							<?php $result = mysql_query("SELECT * FROM departments");
 								while($row = mysql_fetch_array($result)){
-									echo "<option value=".$row['id'].">".$row['name']."</option>";
+								    if($reg_user_row['department_id'] == $row['id'] ){
+                                        echo "<option value=".$row['id']." selected='selected'>".$row['name']."</option>";
+                                    }
+                                    else {
+                                        echo "<option value=".$row['id'].">".$row['name']."</option>";
+                                    }
 								}
 							?>
 						</select>
@@ -98,11 +103,20 @@
 				<div class="control-group">
 					<label class="control-label" for="student_degree_type">Degree Type</label>
 					<div class="controls">
-						<select name="student_degree_type">
-							<option>BS</option>
-							<option>MS</option>
-							<option>PhD</option>
-						</select>
+					   <select name="student_degree_type">
+                        <?php $result = mysql_query("SELECT DISTINCT degree from students;");
+                            $i=1;
+                            while($row = mysql_fetch_array($result)){
+                                if($reg_user_row['degree'] == $row['degree'] ){
+                                    echo "<option value=".$i." selected='selected'>".$row['degree']."</option>";
+                                }
+                                else {
+                                    echo "<option value=".$i.">".$row['degree']."</option>";
+                                }
+                                $i = $i + 1;
+                            }
+                        ?>
+                       </select>
 					</div>
 				</div>
 				<div class="control-group">
