@@ -238,21 +238,17 @@
 		</div>
     <script>
         $(document).ready(function() {
-            $("#faculty_options").hide();
             loadSectionsDropdown();
             addSchool(1);
 						$("#update_personal_information").addClass("active");
         });
 
-        $("#user_type").change(function(){
-            if($("#user_type option:selected").text() == "Student"){
-                $("#faculty_options").hide();
-                $("#student_options").show();
-            }else if($("#user_type option:selected").text() == "Faculty"){
-                $("#faculty_options").show();
-                $("#student_options").hide();
-            }
-        });
+				<?php
+				if($_SESSION['user_type']=="students")
+					echo '$("#faculty_options").hide(); $("#student_options").show();';
+				else
+					echo '$("#faculty_options").show(); $("#student_options").hide();';
+				?>
 
         $("#faculty_course").change(function(){loadSectionsDropdown();});
         
