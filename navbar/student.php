@@ -6,7 +6,7 @@
     <li><a href="#">View Enrolled Courses</a></li>
   </ul>
   </li>
-  <li id="update_personal_information"><a href="#">Update Personal Information</a></li>
+  <li id="update_personal_information"><a href="update_account.php">Update Personal Information</a></li>
   <li id="find_tutors"><a href="#about">Find Tutor</a></li>
   <?php
 	$result = mysql_query("SELECT * FROM tutors WHERE student_id=".$_SESSION['user_id'].";");
