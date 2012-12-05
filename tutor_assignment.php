@@ -40,7 +40,11 @@
       </div>
     </div>
 
-    <!-- Le javascript -->
+		<script>
+      $(document).ready(function() {
+        $("#assign_tutors").addClass("active");
+      });
+		</script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
