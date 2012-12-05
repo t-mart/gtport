@@ -13,10 +13,10 @@
     <li><a href="tutor_search.php">Find a tutor</a></li>
     <li><a href="tutor_applications.php">Apply to be a tutor</a></li>
 		<?php
-		$result = mysql_query("SELECT * FROM tutors WHERE student_id=".$_SESSION['user_id'].";");
+		$result = mysql_query(sprintf("SELECT * FROM tutors t where t.student_id=%d and t.authorizing_faculty_id IS NOT NULL;", $_SESSION['user_id']));
 		
 		if(mysql_num_rows($result)>0)
-			echo '    <li><a href="#">Tutor Logbook</a></li>';
+			echo '<li><a href="record_tutor_session.php">Tutor Logbook</a></li>';
 		?>
   </ul>
   </li>
