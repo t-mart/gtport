@@ -104,18 +104,21 @@
                     <label class="control-label" for="student_degree_type">Degree Type</label>
                     <div class="controls">
                        <select name="student_degree_type">
-                        <?php $result = mysql_query("SELECT DISTINCT degree from students;");
-                            $i=1;
-                            while($row = mysql_fetch_array($result)){
-                                if($reg_user_row['degree'] == $row['degree'] ){
-                                    echo "<option value=".$i." selected='selected'>".$row['degree']."</option>";
-                                }
-                                else {
-                                    echo "<option value=".$i.">".$row['degree']."</option>";
-                                }
-                                $i = $i + 1;
-                            }
-                        ?>
+                            <?php 
+                                    if($reg_user_row['degree'] == "BS"){
+                                            echo "<option selected='selected'>BS</option>";
+                                            echo "<option>MS</option>";
+                                            echo "<option>PhD</option>";
+                                    }else if($reg_user_row['degree']=="MS"){
+                                            echo "<option>BS</option>";
+                                            echo "<option selected='selected'>MS</option>";
+                                            echo "<option>PhD</option>";
+                                    }else{
+                                            echo "<option>BS</option>";
+                                            echo "<option>MS</option>";
+                                            echo "<option selected='selected'>PhD</option>";
+                                    }
+                            ?>
                        </select>
                     </div>
                 </div>
@@ -140,9 +143,21 @@
                         <label class="control-label" for="previous_education1">Degree</label>
                         <div class="controls">
                             <select name="previous_education1_degree">
-                                <option>BS</option>
-                                <option>MS</option>
-                                <option>PhD</option>
+                            <?php 
+                                    if($school_hist_row['degree'] == "BS"){
+                                            echo "<option selected='selected'>BS</option>";
+                                            echo "<option>MS</option>";
+                                            echo "<option>PhD</option>";
+                                    }else if($school_hist_row['degree']=="MS"){
+                                            echo "<option>BS</option>";
+                                            echo "<option selected='selected'>MS</option>";
+                                            echo "<option>PhD</option>";
+                                    }else{
+                                            echo "<option>BS</option>";
+                                            echo "<option>MS</option>";
+                                            echo "<option selected='selected'>PhD</option>";
+                                    }
+                            ?>
                             </select>
                         </div>
                     </div>
