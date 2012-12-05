@@ -6,7 +6,6 @@
     <li><a href="view_courses.php">View Enrolled Courses</a></li>
   </ul>
   </li>
-<<<<<<< HEAD
   <li id="update_personal_information"><a href="update_account.php">Update Personal Information</a></li>
   <li id="find_tutors"><a href="#about">Find Tutor</a></li>
   <li id="update_personal_information"><a href="#">Update Personal Information</a></li>
