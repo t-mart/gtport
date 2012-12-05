@@ -8,7 +8,6 @@
   </li>
   <li id="update_personal_information"><a href="update_account.php">Update Personal Information</a></li>
   <li id="find_tutors"><a href="#about">Find Tutor</a></li>
-  <li id="update_personal_information"><a href="#">Update Personal Information</a></li>
   <li id="tutoring" class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoring <b class="caret"></b></a>
   <ul class="dropdown-menu">
