@@ -50,7 +50,7 @@ function handleForm(){
         if($user_type == "students"){
             $student_query = "UPDATE students SET department_id='".$_POST['student_degree']."',degree='".$_POST['student_degree_type']."' WHERE user_id=".$user_id.";";
                 
-            echo "student_query: ".$student_query."\n";
+            //echo "student_query: ".$student_query."\n";
             
             if(!mysql_query($student_query))
                 die('Error: '.mysql_error());
