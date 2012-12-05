@@ -38,6 +38,7 @@
   </head>
   <body>
 		<?php include('navbar.html')?>
+  <div class="container">
 		<form class="form-horizontal" action="update_account.php" method="post">
 			<div class="control-group">
 				<label class="control-label" for="email">Email</label>
@@ -158,7 +159,7 @@
                             <input type="text" name="previous_education1_gpa" value="<?php echo $school_hist_row['gpa']; ?>">
                         </div>
                     </div>
-                </div>';
+                </div>
                 
 			</div>
 			<div id="faculty_options">
@@ -219,6 +220,7 @@
 					<a href="index.php"><button type="button" class="btn">Cancel</button></a>
 				</div>
 		</form>
+	</div>
 	<script>
 		$(document).ready(function() {
 			$("#faculty_options").hide();
