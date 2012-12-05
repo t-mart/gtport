@@ -13,6 +13,7 @@ include_once('database.php');?>
 	</script>
   </head>
   <body>
+  <div class="container">
 		<?php include('navbar.html')?>
 		<form class="form-inline">
 			<input id="course_code" type="text" class="input" placeholder="Course Code">
@@ -22,6 +23,7 @@ include_once('database.php');?>
 		</form>
 		<div id="results">
 		</div>
+	</div>
 		<script>
 			$(document).ready(function() {
 				$("#tutoring").addClass("active");

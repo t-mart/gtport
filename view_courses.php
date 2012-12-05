@@ -7,8 +7,8 @@ include_once('database.php');?>
 		<?php include('bootstrap_head.html');?>
   </head>
   <body>
-  <div class="container">
 			<?php include('navbar.html');?>
+  <div class="container">
 			<table id="courses_table" class="table table-bordered table-hover table-condensed">
 				<thead>
 					<tr>

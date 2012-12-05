@@ -210,6 +210,7 @@
 			$("#faculty_options").hide();
 			loadSectionsDropdown();
 			addSchool(1);
+			$("#update_personal_information").addClass("active");
 		});
 
 		$("#user_type").change(function(){

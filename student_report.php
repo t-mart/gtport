@@ -8,6 +8,7 @@ include_once('database.php');?>
   </head>
   <body>
 			<?php include('navbar.html');?>
+  <div class="container">
 			<table id="student_report" class="table table-bordered table-hover table-condensed">
 				<thead>
 					<tr>
@@ -45,6 +46,7 @@ include_once('database.php');?>
 				?>
 				</tbody>
 			</table>
+	</div>
 			<script src="bootstrap/js/bootstrap.min.js"></script>
 			<script>
 				$(document).ready(function() {
