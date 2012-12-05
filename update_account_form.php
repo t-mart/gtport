@@ -225,6 +225,7 @@
 		$("#faculty_course").change(function(){loadSectionsDropdown();});
 		
 	</script>
+	<script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
 <?php mysql_close($con);?>
