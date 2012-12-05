@@ -24,18 +24,19 @@
 		$query .= "c.name LIKE '%".$_GET['keyword']."%' ";
 	else
 		$query = "";
-	$query .=";";
 	
 	//echo $query;
 
-	$result = mysql_query($query);
-	while($row = mysql_fetch_array($result)){
-		echo '<tr>';
-		echo "<td>".$row['abbreviation']." ".$row['code']."</td>";
-		echo "<td>".$row['name']."</td>";
-		echo "<td>".$row['first_name'].", ".$row['last_name']."</td>";
-		echo "<td>".$row['email']."</td>";
-		echo '</tr>';
+	if($query!=""){
+		$result = mysql_query($query);
+		while($row = mysql_fetch_array($result)){
+			echo '<tr>';
+			echo "<td>".$row['abbreviation']." ".$row['code']."</td>";
+			echo "<td>".$row['name']."</td>";
+			echo "<td>".$row['first_name'].", ".$row['last_name']."</td>";
+			echo "<td>".$row['email']."</td>";
+			echo '</tr>';
+		}
 	}
 ?>
 </tbody>
