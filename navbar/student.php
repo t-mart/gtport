@@ -12,16 +12,15 @@
   <li id="tutoring" class="dropdown">
   <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutoring <b class="caret"></b></a>
   <ul class="dropdown-menu">
-    <li><a href="#">Find a tutor</a></li>
+    <li><a href="tutor_search.php">Find a tutor</a></li>
     <li><a href="tutor_applications.php">Apply to be a tutor</a></li>
-    <li><a href="#">Tutor Logbook</a></li>
+		<?php
+		$result = mysql_query("SELECT * FROM tutors WHERE student_id=".$_SESSION['user_id'].";");
+		
+		if(mysql_num_rows($result)>0)
+			echo '    <li><a href="#">Tutor Logbook</a></li>';
+		?>
   </ul>
   </li>
-  <?php
-	//$result = mysql_query("SELECT * FROM tutors WHERE student_id=".$_SESSION['user_id'].";");
-	
-	//if(mysql_num_rows($result)>0)
-		//echo '    <li id="tutor_logbook"><a href="#contact">Tutor Logbook</a></li>';
-  ?>
   <li id="grade_report"><a href="student_report.php">View Grading Pattern</a></li>
 </ul>
