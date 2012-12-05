@@ -35,26 +35,26 @@ function handleForm(){
         //IF FORM HAS BEEN SUBMITTED -- UPDATE  
         
         //REG_USER INFO UPDATE
-        $reg_users_update= "UPDATE regular_users SET first_name='".$_POST['first_name']."', last_name='".$_POST['last_name']."', email='".$_POST['email']."',dob='".$_POST['dob']."', permanent_address='".
-        $_POST['permanent_address_line1']." ".$_POST['permanent_address_line2']." ".$_POST['permanent_address_line3']."', current_address='".
-        $_POST['current_address_line1']." ".$_POST['current_address_line2']." ".$_POST['current_address_line3']."', gender='".
-        $_POST['gender']."', phone_number='".$_POST['phone_number']."' WHERE user_id=".$user_id.";";
-        if($debug)
-            echo "reg_users_update: ".$reg_users_update."\n";
-        if(!mysql_query($reg_users_update))
-            die('Error: '.mysql_error());
-        
-        //DEGREE UPDATE
-        $student_query = "";
-        $faculty_query = "";
-        if($user_type == "students"){
-            $student_query = "UPDATE students SET department_id='".$_POST['student_degree']."',degree='".$_POST['student_degree_type']."' WHERE user_id=".$user_id.";";
-                
-            echo "student_query: ".$student_query."\n";
+    $reg_users_update= "UPDATE regular_users SET first_name='".$_POST['first_name']."', last_name='".$_POST['last_name']."', email='".$_POST['email']."',dob='".$_POST['dob']."', permanent_address='".
+    $_POST['permanent_address_line1']." ".$_POST['permanent_address_line2']." ".$_POST['permanent_address_line3']."', current_address='".
+    $_POST['current_address_line1']." ".$_POST['current_address_line2']." ".$_POST['current_address_line3']."', gender='".
+    $_POST['gender']."', phone_number='".$_POST['phone_number']."' WHERE user_id=".$user_id.";";
+    if($debug)
+        echo "reg_users_update: ".$reg_users_update."\n";
+    if(!mysql_query($reg_users_update))
+        die('Error: '.mysql_error());
+    
+    //DEGREE UPDATE
+    $student_query = "";
+    $faculty_query = "";
+    if($user_type == "students"){
+        $student_query = "UPDATE students SET department_id='".$_POST['student_degree']."',degree='".$_POST['student_degree_type']."' WHERE user_id=".$user_id.";";
             
-            if(!mysql_query($student_query))
-                die('Error: '.mysql_error());
-                
+        echo "student_query: ".$student_query."\n";
+        
+        if(!mysql_query($student_query))
+            die('Error: '.mysql_error());
+            
         //SCHOOL_HIST UPDATE
         for($i=1;$i<2;$i++){
             //changed this just to 1 for now.
@@ -62,9 +62,7 @@ function handleForm(){
             if(isset($_POST[$prefix.'_name']) && $_POST[$prefix.'_name'] != ""){
                 $history_query = "UPDATE school_histories SET student_id=".$user_id.",grad_year='".$_POST[$prefix.'_year']."', name='".$_POST[$prefix.'_name']."', gpa='".
                 $_POST[$prefix.'_gpa']."', major='".$_POST[$prefix.'_major']."', degree='".$_POST[$prefix.'_degree']."';";
-                
-                
-                
+
                 if($debug)
                     echo "history_query: ".$history_query."\n";
                 if(!mysql_query($history_query))
