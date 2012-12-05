@@ -19,6 +19,7 @@
   </head>
   <body>
 		<?php include('navbar.html')?>
+  <div class="container">
 		<form class="form-horizontal" action="create_account.php" method="post">
 			<div class="control-group">
 				<label class="control-label" for="username">Username</label>
@@ -178,6 +179,7 @@
 					<a href="index.php"><button type="button" class="btn">Cancel</button></a>
 				</div>
 		</form>
+	</div>
 	<script>
 		$(document).ready(function() {
 			$("#faculty_options").hide();
